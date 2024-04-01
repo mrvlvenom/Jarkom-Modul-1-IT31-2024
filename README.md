@@ -14,8 +14,23 @@ Pradityo mencoba mengembangkan server ftp, tetapi seseorang mencoba melakukan br
 author: youdaemon
 
 nc 10.15.40.20 10004
-
+No 4:                                                                                         Pertanyaan: Apa password yang berhasil didapatkan oleh hacker setelah melakukan bruteforce login ftp?                   
+Format: strings                     
 ### Solution
+Untuk problem tersebut kita menggunakan
+```bash
+frame contains "successful"
+```
+karena pada soal terdapat poin yang berhasil untuk login, jadi kita langsung mencari kata "successful" yang merujuk pada "login successful", seperti gambar dibawah ini:
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/atm1.png)
+
+Kemudian kami melihat Follow TCP Stream, dan menemukan password hacker yang berhasil melakukan bruteforce login.
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/atm2.png)
+
+Setelah itu, kita masukkan password tersebut ke dalam terminal linux untuk mendapatkan flag yang dituju:
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/atm.png)
+
+Kemudian, kami berhasil menemukan flag yang diinginkan, dan saat kami submit di CTFd, ternyata benar untuk flag tersebut.
 
 ### 2. How Many packets?
 ---
@@ -27,7 +42,14 @@ attachment: same as ATM or ATP or FTP ? 🤔
 author: youdaemon
 
 nc 10.15.40.20 10005
+No 5:                                                                                      Pertanyaan: Berapa total attempt login(bruteforce) yang dilakukan oleh hacker?                Format: number
 ### Solution
+Untuk problem ini kita menggunakan hal yang sama seperti soal sebelumnya, tetapi dengan kata "Incorrect" karena pada soal diminta total attempt untuk login (bruteforce) yang dilakukan oleh hacker
+```bash
+frame contains "Incorrect"
+```
+Kemudian muncul seperti pada gambar dibawah:
+
 
 ### 3. Trace him
 ---
