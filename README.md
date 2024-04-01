@@ -194,7 +194,19 @@ author: youdaemon
 
 nc 10.15.40.20 10010
 
+No 10:         
+
+Pertanyaan: Ternyata attacker menyisipkan file lainnya selain dari file malware, temukan pesan yg dikutip oleh attacker?
+
+Format: strings 
+
 ### Solution
+Untuk problem tersebut kita mencari nya sama seperti sebelumnya, dan mendapatkan kejanggalan pada stream 14, yang dimana ada sebuah file foto. Kita mencoba untuk mendownloadnya, dengan export object -> FTP-DATA dan di save.
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/secret2.png)
+Setelah itu kita buka dan hasil dari pesan yang dikutip seperti ini:
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/secret1.png)
+Kemudian kita mencoba untuk memasukkan dalam terminal linux dan berhasil menemukan flagnya, Setelah itu di submit di CTFd, dan benar hasilnya.
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/secret.png)
 
 ### 8. Evidence
 ---
@@ -205,7 +217,32 @@ Attachment: attachment Author: kiseki
 
 nc 10.15.40.20 10002
 
+No 1:             
+
+Pertanyaan: Apa domain milik korban?
+
+Format: xxxxxx.xxx: e.g. google.com 
+
+No 2:             
+
+Pertanyaan: Apa web server yang digunakan oleh korban?
+
+Format: name-version: e.h. nginx-1.18.0 
+
+No 3:             
+
+Pertanyaan: Apa endpoint yang digunakan untuk login sebagai user biasa?
+
+Format: /path/to/endpoint
+
+No 4:             
+
+Pertanyaan: Apa email dan password yang berhasil digunakan untuk login sebagai user biasa?
+
+Format: email:password 
+
 ### Solution
+
 
 ### 9. Fuzz
 ---
