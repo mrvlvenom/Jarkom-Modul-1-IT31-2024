@@ -49,7 +49,12 @@ Untuk problem ini kita menggunakan hal yang sama seperti soal sebelumnya, tetapi
 frame contains "Incorrect"
 ```
 Kemudian muncul seperti pada gambar dibawah:
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/hmp1.png)
 
+Dan kami menentukan untuk jumlahnya dari packets dibawah pojok kanan bawah tersebut yang berjumlah 934, jadi hasil keseluruhannya adalah 934 attempt untuk login (bruteforce) oleh hacker. 
+
+Kemudian kita coba memasukkan ke dalam terminal linux, dan berhasil mendapat flag yang diiinginkan.
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/hmp.png)
 
 ### 3. Trace him
 ---
