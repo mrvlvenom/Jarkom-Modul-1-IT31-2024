@@ -14,8 +14,11 @@ Pradityo mencoba mengembangkan server ftp, tetapi seseorang mencoba melakukan br
 author: youdaemon
 
 nc 10.15.40.20 10004
+
 No 4:                                                                                     
+
 Pertanyaan: Apa password yang berhasil didapatkan oleh hacker setelah melakukan bruteforce login ftp?                   
+
 Format: strings                     
 
 ### Solution
@@ -44,8 +47,11 @@ attachment: same as ATM or ATP or FTP ? 🤔
 author: youdaemon
 
 nc 10.15.40.20 10005
+
 No 5:                                                                                      
+
 Pertanyaan: Berapa total attempt login(bruteforce) yang dilakukan oleh hacker?               
+
 Format: number
 
 ### Solution
@@ -71,8 +77,11 @@ attachment: same as ATM or ATP or FTP ? 🤔
 author: youdaemon
 
 nc 10.15.40.20 10006
+
 No 6:                     
+
 Pertanyaan: Alamat IP attacker?  
+
 Format: xxx.xxx.xxx.xxx
 
 ### Solution
@@ -90,12 +99,17 @@ Attacker menyadari jika dia bisa membuat clone ftp server dari target, temukan k
 author: youdaemon
 
 nc 10.15.40.20 10007
+
 No 1:                     
+
 Pertanyaan: Apa Username FTP yang digunakan oleh attacker?                                   
+
 Format: USER:username
 
 No 2:
+
 Pertanyaan: Apa Password FTP yang digunakan oleh attacker?
+
 Format: PASS:password
 
 ### Solution
@@ -124,8 +138,11 @@ attachment: same as creds
 author: youdaemon
 
 nc 10.15.40.20 10008
+
 No 8:                     
+
 Pertanyaan: Apa nama malware yang dikirim oleh attacker ke korban?                        
+
 Format: strings 
 
 ### Solution
@@ -145,8 +162,11 @@ attachment: same as creds
 author: youdaemon
 
 nc 10.15.40.20 10009
+
 No 9:                     
+
 Pertanyaan: Siapa nama attacker yang sudah melakukan serangan ini?                            
+
 Format: FirstName_LastName 
 
 ### Solution
