@@ -27,12 +27,15 @@ Untuk problem tersebut kita menggunakan
 frame contains "successful"
 ```
 karena pada soal terdapat poin yang berhasil untuk login, jadi kita langsung mencari kata "successful" yang merujuk pada "login successful", seperti gambar dibawah ini:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/atm1.png)
 
 Kemudian kami melihat Follow TCP Stream, dan menemukan password hacker yang berhasil melakukan bruteforce login.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/atm2.png)
 
 Setelah itu, kita masukkan password tersebut ke dalam terminal linux untuk mendapatkan flag yang dituju:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/atm.png)
 
 Kemudian, kami berhasil menemukan flag yang diinginkan, dan saat kami submit di CTFd, ternyata benar untuk flag tersebut.
@@ -60,11 +63,13 @@ Untuk problem ini kita menggunakan hal yang sama seperti soal sebelumnya, tetapi
 frame contains "Incorrect"
 ```
 Kemudian muncul seperti pada gambar dibawah:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/hmp1.png)
 
 Dan kami menentukan untuk jumlahnya dari packets dibawah pojok kanan bawah tersebut yang berjumlah 934, jadi hasil keseluruhannya adalah 934 attempt untuk login (bruteforce) oleh hacker. 
 
 Kemudian kita coba memasukkan ke dalam terminal linux, dan berhasil mendapat flag yang diiinginkan. Dan saat kami submit di CTFd, ternyata benar untuk flag tersebut.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/hmp.png)
 
 ### 3. Trace him
@@ -86,9 +91,11 @@ Format: xxx.xxx.xxx.xxx
 
 ### Solution
 Untuk menemukan alamat dari IP attacker kita mencoba menggunakan Destination IP Attacker yang selalu sama setiap login seperti gambar dibawah ini:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/hmp1.png)
 
 Jadi kami mencoba untuk memasukkan ke dalam terminal linux, dan ternyata berhasil menemukan flag yang diinginkan, kemudian kita submit di CTFd, dan ternyata benar untuk flag tersebut.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/th.png)
 
 ### 4. Creds
@@ -118,14 +125,17 @@ Format: PASS:password
 frame contains "successful"
 ```
 Kemudian kita mendapatkan hasil seperti gambar dibawah ini:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/Creds2.png)
 
 Dan kita coba berhasil (Hasil di akhir), sehingga lanjut ke soal nomor 2
 
 2. Untuk menemukan password dari attacker itu sendiri sama seperti nomor 1 langsung ketemu username dan passwordnya seperti gambar dibawah ini:
+3. 
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/Creds1.png)
 
 Kemudian berhasil menemukan flag yang diinginkan, dan kita coba untuk submit, dan hasilnya benar untuk flag nya.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/Creds.png)
 
 ### 5. Malwleowleo
@@ -147,9 +157,11 @@ Format: strings
 
 ### Solution
 Untuk mencari nama malware itu sendiri kita mendapatkannya dari stream yang sama, seperti foto di soal creds diatas, dengan hasil seperti gambar dibawah ini:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/mlamewe1.png)
 
 Kemudian kita coba untuk dimasukkan ke dalam terminal linux, dan ternyata berhasil mendapatkan flag yang diinginkan. Setelah itu kita coba untuk submit di CTFd, dan berhasil di submit.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/mlamewe.png)
 
 ### 6. Whoami
@@ -175,12 +187,15 @@ Untuk problem diatas, kita melakukan pencarian dengan menggunakan:
 tcp.streaem eq "nomor"
 ```
 Kemudian ketemu pada saat stream 7, dengan hasil seperti gambar dibawah ini:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/whoami1.png)
 
 Karena formatnya seperti base64, kita mencoba untuk men-decode menggunakan decode base64 dari web (online), dan hasilnya seperti gambar dibawah:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/whoami2.png)
 
 Dan hasil namanya adalah Paul Atreides,  kita langsung masukkan sesuai format yaitu Paul-Atreides. Dan mendapatkan flag yang diinginkan. Setelah itu di submit di CTFd, dan hasilnya benar.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/whoami.png)
 
 ### 7. Secret
@@ -202,10 +217,14 @@ Format: strings
 
 ### Solution
 Untuk problem tersebut kita mencari nya sama seperti sebelumnya, dan mendapatkan kejanggalan pada stream 14, yang dimana ada sebuah file foto. Kita mencoba untuk mendownloadnya, dengan export object -> FTP-DATA dan di save.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/secret2.png)
 Setelah itu kita buka dan hasil dari pesan yang dikutip seperti ini:
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/secret1.png)
+
 Kemudian kita mencoba untuk memasukkan dalam terminal linux dan berhasil menemukan flagnya, Setelah itu di submit di CTFd, dan benar hasilnya.
+
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/secret.png)
 
 ### 8. Evidence
@@ -243,6 +262,40 @@ Format: email:password
 
 ### Solution
 
+1. Untuk solusi soal pertama, karena yang dipertanyakan adalah domain milik korban, jadi kita mencari "Host" nya langsung, dan langsung ketemu domainnya yaitu nanomate-solution.com. Seperti gambar dibawah:
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/evidence1.png)
+
+Setelah ketemu, langsung dimasukkan ke dalam terminal linux, dan benar. Kemudian lanjut ke soal berikutnya.
+
+2. Untuk solusi soal kedua, untuk web server itu sendiri sama seperti foto sebelumnya, terdapat nama server disana yaitu apache dengan versi 2.4.56.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/evidence1.png)
+
+Setelah ketemu, langsung dimasukkan ke dalam terminal linux, dan benar. Kemudian lanjut ke soal berikutnya.
+   
+3. Untuk solusi soal ketiga, karena diminta endpoint untuk login sebagai user biasa. Dan ketika dilihat itu sebagian besar web. Jadi, untuk endpointnya bisa didapatkan dari "POST" suatu web. Karena login dari user akan masuk ke dalam "POST suatu web, dan includes/masuk ke database web nya. Jadi pertama kita cari memakai:
+
+```bash
+frame contains "POST"
+```
+Dan setelah menemukan banyak POST dalam source Wireshark tersebut, kami mencari yang terkait dengan CSS-login pada situs web tersebut. Kami kemudian menemukan jalur "/app/includes/process_login.php" yang berisi data POST dari login situs web tersebut yang berhubungan dengan database.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/evidence2.png)
+Jadi langsung kita coba ke terminal, dan akhirnya berhasil. Kemudian lanjut ke soal berikutnya.
+
+4. Untuk solusi soal keempat, disitu terdapat poin jika user berhasil login sebagai user biasa. Berarti langsung kita cari mana login yang berhasil/succesfull tetapi tetep mencari di "POST" path login, dengan cara yang sama seperti sebelumnya:
+
+```bash
+frame contains "POST"
+```
+Dan kita langsung menemukan yang login successfull seperti gambar dibawah:
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/evidence3.png)
+
+Setelah kita menemukan jawaban yang benar pada soal nomor 4, kemudian kita masukkan ke terminal linux sesuai format yang benar, Dan kita mendapatkan flag yang diinginkan. Kemudian di submit di CTFd, dan hasilnya benar.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/evidence.png)
 
 ### 9. Fuzz
 ---
@@ -254,5 +307,6 @@ Attachment: here
 Author: kiseki
 
 nc 10.15.40.20 10001
+
 
 ### Solution
