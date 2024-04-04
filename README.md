@@ -351,4 +351,16 @@ Format: username:password
 
 ![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz4.png)
 
-5. Untuk soal nomor 5, 
+5. Untuk soal nomor 5, kita melakukan cara dengan :
+```bash
+frame contains "Login"
+```
+Dan bertemu seperti pada foto dibawah, kita mencoba untuk menganalisis pada web server, bahwa jika berhasil digunakan berarti masuk dalam html login, jadi kita mencoba mencarinya dan ketemu. Kemudian kita coba masukkkan ke dalam soal, dan benar. Kemudian kita mendapatkan flag yang diinginkan.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz5.png)
+
+Foto dibawah ini untuk hasil akhirnya pada terminal linux.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz1.png)
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz2.png)
