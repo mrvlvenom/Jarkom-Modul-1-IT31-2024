@@ -308,5 +308,47 @@ Author: kiseki
 
 nc 10.15.40.20 10001
 
+No. 1:
+
+Pertanyaan: Apa IP Adress milik attacker?
+Format: xxx.xxx.xxx.xxx
+
+No. 2:
+
+Pertanyaan: Apa port yang digunakan sebagai web server korban?
+Format: xxxx: e.g. 22
+
+No.3:
+
+Pertanyaan: Apa endpoint yang digunakan untuk login?
+Format: /path/to/endpoint
+
+No 4: 
+
+Pertanyaan: Apa tool yang digunakan oleh attacker untuk bruteforce login?
+Format: toolsname-version: e.g. hydra-v9.0-dev
+
+No 5:
+
+Pertanyaan: Apa username dan password yang berhasil digunakan oleh attacker?
+Format: username:password
 
 ### Solution
+
+1. Untuk soal pertama, kita mencoba untuk mencoba untuk melakukan port yang sering muncul (dan selalu ada login nya. Berarti kita mengiranya itu IP Address untuk attacker. Lalu kita coba dan akhirnya dapat flag yang diinginkan.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz3.png)
+ 
+2. Untuk soal nomor 2, yang ditanya adalah web server, dan pada saat di cek di salah satu source port sesuai soal pertama (TCP), dia menggunakan wes server HTPP, berarti menggunakan web server 80. Dan pada saat dimasukkan ke dalam soal, benar dan lanjut ke soal berikutnya.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz4.png)
+
+3. Untuk soal nomor 3, Untuk path itu sendiri, kita liat dari stream sebelumnya yang paling atas, Bahwa pada stream tersebut POST / , merupakan path endpoint yang digunakan untuk login ke dalam web tersebut.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz4.png)
+
+4. Untuk soal nomor 4, tool yang digunakan selalu untuk attacker melakukan bruteforce login adalah Fuzz Faster U Fool v2.0.0-dev pada user-agent. Karena yang diminta formatnya adalah nama singkatannya, jadi kita mencari di google untuk singkatan dari tools tersebut adalah "FFUF", dan sesuai format adalah ffuf-v2.0.0-dev, dan benar pada soal, kemudian lanjut ke soal berikutnya.
+
+![](https://github.com/mrvlvenom/Jarkom-Modul-1-IT31-2024/blob/main/img/fuzz4.png)
+
+5. Untuk soal nomor 5, 
